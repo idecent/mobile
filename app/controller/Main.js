@@ -116,12 +116,31 @@ Ext.define('GS.controller.Main', {
 
         //console.log(this.getGlobalToolbar());
         //console.log(this.getProject().getInnerItems().length)
-        var projectPanel = Ext.create('Ext.Panel', { 
+        var projectPanel = Ext.create('Ext.TabPanel', { 
+            fullscreen: true,
+            tabBarPosition: 'top',
             title: record.get('sponsor_count') + '位支持者',
-            html: record.get('content'),
-            scrollable: true,
-
-            styleHtmlContent: true
+            
+            defaults: {
+                scrollable: true
+            },
+            styleHtmlContent: true,
+            items: [{
+                    
+                    title: '项目介绍',
+                    html: record.get('content'),
+                },
+                {
+                    title: '回报支持',
+                    
+                    html: '回报支持内容。。。'
+                },
+                {
+                    title: '最新动态',
+                    
+                    html: '最新动态...'
+                }
+            ]
 
         });
 

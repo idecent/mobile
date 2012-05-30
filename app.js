@@ -19,7 +19,7 @@ Ext.application({
 
     stores: ['Categories', 'RecommendProjects', 'EndedProjects', 'LatestProjects', 'Notifications'],
 
-    views: ['Main', 'Project', 'GlobalToolbar','CategoryPicker','Message', 'Contact', 'More'],
+    views: ['Main', 'Project', 'GlobalToolbar','CategoryPicker','Message', 'PrivateMsg', 'Notification', 'Contact', 'More'],
 
     icon: {
         57: 'resources/icons/Icon.png',
