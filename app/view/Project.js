@@ -10,14 +10,17 @@ Ext.define('GS.view.Project', {
   config: {
     title: '项目',
     iconCls: 'home',
+
     listeners: {
           back: function() {
               Ext.getCmp('projectSelctorBtn').show();
+              Ext.getCmp('focusProjectBtn').hide();
               //TODO:  pop project detail content
           }
     },   
+
     navigationBar: {
-      ui: 'dark',
+      ui: 'light',
       items: [{xtype: 'globaltoolbar',
               id: 'projectSelctorBtn'
             }],
@@ -25,6 +28,7 @@ Ext.define('GS.view.Project', {
     },
     items: [{
               xtype: 'list',
+
               itemTpl: Ext.create(
                 'Ext.XTemplate',
                 '<div class="projects-wrapper">',
@@ -38,7 +42,6 @@ Ext.define('GS.view.Project', {
                 ),
                 store: 'RecommendProjects',
                 title: '推荐项目'
-
             }]
   }
 })

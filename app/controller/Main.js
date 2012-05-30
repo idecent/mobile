@@ -1,6 +1,5 @@
 Ext.define('GS.controller.Main', {
     extend: 'Ext.app.Controller',
-    
     config: {
         refs: {
             mainPanel: 'mainview',
@@ -93,28 +92,37 @@ Ext.define('GS.controller.Main', {
         // this.getProject().getNavigationBar().hide();
         var navigationView = this.getProject()
         
-        //console.log(this.getProject().getNavigationBar())
-        this.getProject().getNavigationBar().add([
-          {
-              xtype: 'button',
-              id: 'addButton',
-              align: 'right',
-              ui: 'action',
-              handler : function() {
-                alert("需要登陆");
-              },
-              //iconCls: 'compose',
-              text: '关注',
-              iconMask: true
-          }
-        ]);
+        console.log(this.getProject().getNavigationBar())
+        if (Ext.getCmp('focusProjectBtn') == undefined) {
+            this.getProject().getNavigationBar().add([
+              {
+                  xtype: 'button',
+                  id: 'focusProjectBtn',
+                  align: 'right',
+                  ui: 'action',
+                  handler : function() {
+                    // alert("需要登陆");
+                    console.log("需要登陆");
+                  },
+                  //iconCls: 'compose',
+                  text: '关注',
+                  iconMask: true
+              }
+            ]);
+
+        }else{
+            Ext.getCmp('focusProjectBtn').show();
+        }
+
         //console.log(this.getGlobalToolbar());
         //console.log(this.getProject().getInnerItems().length)
         var projectPanel = Ext.create('Ext.Panel', { 
             title: record.get('sponsor_count') + '位支持者',
             html: record.get('content'),
             scrollable: true,
+
             styleHtmlContent: true
+
         });
 
         navigationView.push(projectPanel);
@@ -122,6 +130,7 @@ Ext.define('GS.controller.Main', {
         this.getGlobalToolbar().hide();
         var navigationBar = navigationView.getNavigationBar();
         var backButton = navigationBar.getBackButton();
+
 
         // console.log(backButton);
         // backButton.on('tap', alert("xxx"), this, {

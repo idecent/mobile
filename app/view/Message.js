@@ -10,6 +10,7 @@ Ext.define('GS.view.Message', {
   config: {
     title: '消息',
     iconCls: 'team',
+    badgeText: '5',
     navigationBar: {
       hidden: true
     },

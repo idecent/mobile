@@ -6,7 +6,7 @@ Ext.define('GS.view.GlobalToolbar', {
     config: {
         docked: 'top',
         items: [{
-            iconCls: 'home',
+            iconCls: 'arrow_down',
             iconMask: true,
             ui: 'plain',
             action: 'chooseCategroies'
