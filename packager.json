@@ -1,0 +1,22 @@
+{
+	"applicationName":"DemoHour",
+	"applicationId":"com.mycompany.myAppID",
+	"versionString":"1.0",
+	"iconName":"resources/icons/Icon~ipad.png",
+	"inputPath":"build/native",
+	"outputPath":"build/",
+	"configuration":"Debug",
+	"platform":"Android",
+	"deviceType":"Universal",
+	"certificatePath":"~/Sites/demohour-debug.keystore",
+	"certificateAlias":"demohour-debug",
+	"certificatePassword":"ABCDEABCD2",
+	"sdkPath":"/usr/local/android-sdk-macosx/",
+	"androidAPILevel":"15",
+	"orientations": [
+		"portrait",
+		"landscapeLeft",
+		"landscapeRight",
+		"portraitUpsideDown"
+	]
+}
