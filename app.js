@@ -5,7 +5,7 @@ Ext.Loader.setPath({
 //</debug>
 
 Ext.application({
-    models: ["Project"],
+    models: ["Project", "Notification"],
 
     controllers: ["Main"],
     // viewport : {

@@ -5,13 +5,12 @@ Ext.define('GS.view.GlobalToolbar', {
 
     config: {
         docked: 'top',
+        ui: 'light',
         items: [{
             iconCls: 'arrow_down',
             iconMask: true,
             ui: 'plain',
             action: 'chooseCategroies'
-        },{
-            xtype: 'spacer'
         }]
     }
 });

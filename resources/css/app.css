@@ -5,7 +5,19 @@ width:70px;
 height:70px;
 float: left;
 }
+
+.notifications-wrapper img {
+border-radius: 5px;
+width:70px;
+height:50px;
+float: left;
+}
 .projects-wrapper h2 {
+font-weight: bold;
+padding-bottom: 3px;
+}
+
+.notifications-wrapper h2 {
 font-weight: bold;
 padding-bottom: 3px;
 }

@@ -1,15 +1,18 @@
 Ext.define('GS.view.Message', {
   extend: 'Ext.TabPanel',
   xtype: 'message',
-  // requires: [
-  // ],
+
+  requires: [
+    'Ext.List'
+  ],
   config: {
     title: '消息',
     iconCls: 'team',
+    ui: 'light',
     // badgeText: '5',
-    // navigationBar: {
-    //   hidden: true
-    // },
+    defaults: {
+        scrollable: true
+    },
     items: [
       {
         xtype: 'titlebar',
@@ -17,10 +20,10 @@ Ext.define('GS.view.Message', {
         title: '消息'
       },
       {
-        xtype: 'privatemsg',
+        xtype: 'notification'
       },
       {
-        xtype: 'notification'
+        xtype: 'privatemsg'
       }
     ]
   }
